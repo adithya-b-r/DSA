@@ -44,23 +44,29 @@ class patterns {
     System.out.println("\nPattern 14");
     p14(n);
 
-    // System.out.println("\nPattern 15");
-    // p15(n);
+    System.out.println("\nPattern 15");
+    p15(n);
 
-    // System.out.println("\nPattern 16");
-    // p16(n);
+    System.out.println("\nPattern 16");
+    p16(n);
 
-    // System.out.println("\nPattern 17");
-    // p17(n);
+    System.out.println("\nPattern 17");
+    p17(n);
 
-    // System.out.println("\nPattern 18");
-    // p18(n);
+    System.out.println("\nPattern 18");
+    p18(n);
 
     System.out.println("\nPattern 19");
     p19(n);
 
-    // System.out.println("\nPattern 20");
-    // p20(n);
+    System.out.println("\nPattern 20");
+    p20(n);
+
+    System.out.println("\nPattern 21");
+    p21(n);
+
+    System.out.println("\nPattern 22");
+    p22(n);
   }
 
   static void p1(int n) {
@@ -229,36 +235,68 @@ class patterns {
   }
 
   static void p15(int n) {
-    for (int i = n; i > 0; i--) {
-      for (int j = 0; j < i; j++) {
-
+    for (int i = 0; i < n; i++) {
+      for (char ch = 'A'; ch <= 'A' + (n - i - 1); ch++) {
+        System.out.print(ch + " ");
       }
       System.out.println();
     }
   }
 
   static void p16(int n) {
-    for (int i = n; i > 0; i--) {
-      for (int j = 0; j < i; j++) {
-
+    char ch = 'A';
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j <= i; j++) {
+        System.out.print(ch + " ");
       }
+      ch++;
       System.out.println();
     }
   }
 
   static void p17(int n) {
-    for (int i = n; i > 0; i--) {
-      for (int j = 0; j < i; j++) {
+    for (int i = 0; i < n; i++) {
+      char ch = 'A';
 
+      // Space
+      for (int j = 0; j < n - i - 1; j++) {
+        System.out.print("  ");
       }
+
+      // Character
+      for (int j = 0; j < 2 * i + 1; j++) {
+        System.out.print(ch + " ");
+
+        if ((2 * i + 1) / 2 <= j)
+          ch--;
+        else
+          ch++;
+      }
+
+      // Space
+      for (int j = 0; j < n - i - 1; j++) {
+        System.out.print("  ");
+      }
+
       System.out.println();
     }
   }
 
-  static void p18(int n) {
-    for (int i = n; i > 0; i--) {
-      for (int j = 0; j < i; j++) {
+  // static void p18(int n) {
+  // for (int i = 0; i < n; i++) {
+  // for (char ch = (char)('E'-i); ch <= 'E'; ch++) {
+  // System.out.print(ch + " ");
+  // }
+  // System.out.println();
+  // }
+  // }
 
+  // Own Logic
+  static void p18(int n) {
+    char ch = (char) ('A' + n - 1);
+    for (int i = 0; i < n; i++) {
+      for (char c = (char) (ch - i); c <= ch; c++) {
+        System.out.print(c + " ");
       }
       System.out.println();
     }
@@ -285,7 +323,7 @@ class patterns {
       System.out.println();
     }
 
-    spaces = n*2-2;
+    spaces = n * 2 - 2;
 
     for (int i = 0; i < n; i++) {
       // Star
@@ -307,11 +345,60 @@ class patterns {
   }
 
   static void p20(int n) {
-    for (int i = n; i > 0; i--) {
-      for (int j = 0; j < i; j++) {
+    int spaces = 2 * n - 2;
 
+    for (int i = 1; i <= 2 * n - 1; i++) {
+      int stars = i;
+      if (i > n)
+        stars = 2 * n - i;
+
+      // Star
+      for (int j = 0; j < stars; j++) {
+        System.out.print("*");
       }
+
+      // Space
+      for (int j = 0; j < spaces; j++) {
+        System.out.print(" ");
+      }
+
+      // Star
+      for (int j = 0; j < stars; j++) {
+        System.out.print("*");
+      }
+
+      if (n > i)
+        spaces -= 2;
+      else
+        spaces += 2;
+
+      System.out.println();
     }
   }
 
+  static void p21(int n) {
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
+          System.out.print("* ");
+        else
+          System.out.print("  ");
+      }
+      System.out.println();
+    }
+  }
+
+  static void p22(int n) {
+    for (int i = 0; i < 2 * n - 1; i++) {
+      for (int j = 0; j < 2 * n - 1; j++) {
+        int top = i;
+        int left = j;
+        int right = (2 * n - 2) - j;
+        int bottom = (2 * n - 2) - i;
+
+        System.out.print(n - Math.min(Math.min(top, bottom), Math.min(left, right))+" ");
+      }
+      System.out.println();
+    }
+  }
 }
