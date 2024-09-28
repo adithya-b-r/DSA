@@ -1,3 +1,4 @@
+package Patterns;
 class patternZ {
 
   static void pattern(int n) {
