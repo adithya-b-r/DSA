@@ -1,4 +1,4 @@
-package recursion;
+package Parameterised;
 
 class printLinearlyFrom1toN {
   static void printFrom1toN(int i, int n) {

@@ -1,4 +1,4 @@
-package recursion;
+package Parameterised;
 
 class printFromNto1 {
   static void printTillN(int n){

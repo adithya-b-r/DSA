@@ -1,4 +1,4 @@
-package recursion;
+package Parameterised;
 
 class counter {
   static void countTill(int n) {

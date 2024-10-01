@@ -1,4 +1,4 @@
-package recursion;
+package Parameterised;
 
 public class printNameNtimes {
   static void printName(int i, int n){

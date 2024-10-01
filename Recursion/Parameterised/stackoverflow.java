@@ -1,4 +1,4 @@
-package recursion;
+package Parameterised;
 
 class stackoverflow {
   static void testingOverflow(int a){
