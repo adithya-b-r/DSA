@@ -1,7 +1,7 @@
 // package Hashing;
 import java.util.Scanner;
 
-class HashingApproach{
+class hashingApproach{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
