@@ -1,4 +1,4 @@
-package basicMaths;
+package Basic_Maths;
 
 class digitExtraction {
   public static void main(String[] args) {

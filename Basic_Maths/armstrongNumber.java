@@ -1,4 +1,4 @@
-package basicMaths;
+package Basic_Maths;
 
 class armstrongNumber {
   static boolean checkArmstrong(int n){

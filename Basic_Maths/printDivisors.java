@@ -1,4 +1,4 @@
-package basicMaths;
+package Basic_Maths;
 
 class printDivisors {
   static void displayDivisors1(int n){

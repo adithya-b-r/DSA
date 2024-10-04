@@ -1,4 +1,4 @@
-package basicMaths;
+package Basic_Maths;
 
 class GCD_or_HCF {
   static void checkGCD1(int n1, int n2){

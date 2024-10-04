@@ -1,4 +1,4 @@
-package basicMaths;
+package Basic_Maths;
 
 class primeNumber {
   static boolean checkPrime(int n){
