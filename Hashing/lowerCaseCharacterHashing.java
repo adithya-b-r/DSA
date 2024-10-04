@@ -1,7 +1,7 @@
 // package Hashing;
 import java.util.Scanner;
 
-class characterHashing{
+class lowerCaseCharacterHashing{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
@@ -14,9 +14,9 @@ class characterHashing{
     for(int i=0; i<n; i++)
       arr[i] = sc.next().charAt(0);
 
-    int hash[] = new int[255];
+    int hash[] = new int[26];
     for(int i=0; i<n; i++)
-      hash[arr[i]]++;
+      hash[arr[i] - 'a']++;
 
     System.out.print("Enter value for q : ");
     int q = sc.nextInt();
@@ -25,7 +25,7 @@ class characterHashing{
       char ch;
       System.out.print("Enter a character : ");
       ch = sc.next().charAt(0);
-      System.out.println("Count of "+ch+" : "+hash[ch]);
+      System.out.println("Count of "+ch+" : "+hash[ch - 'a']);
     }
 
     sc.close();
