@@ -1,14 +1,14 @@
 package Basic_Maths;
 
 class armstrongNumber {
-  static boolean checkArmstrong(int n){
-    int original = n;
+  static boolean checkArmstrong(int num){
+    int original = num;
     int sum = 0;
 
-    while(n>0){
-      int lastDigit = n%10;
+    while(num>0){
+      int lastDigit = num%10;
       sum += (lastDigit*lastDigit*lastDigit);
-      n /= 10;
+      num /= 10;
     }
 
     return sum == original;
