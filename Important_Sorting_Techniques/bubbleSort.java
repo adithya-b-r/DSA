@@ -20,7 +20,8 @@ public class bubbleSort {
           count++;
         }
       }
-      if(!isSwaped) break;
+      if(!isSwaped) 
+        break;
     }
 
     System.out.println();
