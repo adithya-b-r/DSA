@@ -1,4 +1,3 @@
-// package Hashing;
 import java.util.Scanner;
 
 class lowerCaseCharacterHashing{
