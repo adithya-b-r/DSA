@@ -11,7 +11,7 @@ public class HashSet_Class {
     set.remove("Banana");
     System.out.println("Contain Apple? : " + set.contains("Apple"));
 
-    //Displaying contents of set
+    //Displaying contents of Set
     System.out.println(set);
 
     System.out.println("Set size : "+set.size());
