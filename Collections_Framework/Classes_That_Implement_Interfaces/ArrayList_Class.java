@@ -21,7 +21,7 @@ public class ArrayList_Class {
 
     System.out.println("List items : " + list + "\nList size : " + list.size());
 
-    System.out.println("Contains Apple ? : " + list.contains("Apple"));
+    System.out.println("Contains Apple? : " + list.contains("Apple"));
 
     System.out.println("Is list empty? : " + list.isEmpty());
 
