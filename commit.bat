@@ -1,4 +1,4 @@
-@REM Batch script to accept string parameter and automate git commit.
+@REM Batch script to automate Git commit with a string parameter.
 
 @ECHO OFF
 git add .
