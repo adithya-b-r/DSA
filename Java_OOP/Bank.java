@@ -36,13 +36,13 @@ public class Bank {
     return secretPin;
   }
 
-  public String deposit(long amount) {
+  public String deposit(double amount) {
     if (isActive) {
       if (amount > 0) {
         balance += amount;
-        return "Deposit successful!";
+        return "Deposit successful! Your new balance is Rs "+balance;
       } else {
-        return "Amount must be greater than ₹0";
+        return "Amount must be greater than Rs 0";
       }
     } else {
       return "Unable to process the request";
@@ -54,8 +54,8 @@ public class Bank {
     return status;
   }
 
-  public String withdraw(long amount, int pin) {
-    if(pin != secretPin){
+  public String withdraw(double amount, int pin) {
+    if (pin != secretPin) {
       return "Invalid PIN.";
     }
 
@@ -63,14 +63,14 @@ public class Bank {
       if (amount > 0) {
         if (amount <= balance - 500) {
           balance -= amount;
-          return "Withdrew ₹" + amount + " successfully. Current balance: " + balance;
+          return "Withdrew Rs " + amount + " successfully. Current balance: Rs " + balance;
         } else {
           return "Insufficient balance";
         }
       } else {
         return "Insufficient balance";
       }
-    }else{
+    } else {
       return "Unable to process the request";
     }
   }
