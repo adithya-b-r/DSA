@@ -20,7 +20,6 @@ public class bubbleSort {
           count++;
         }
       }
-
       if(!isSwaped) break;
     }
 
