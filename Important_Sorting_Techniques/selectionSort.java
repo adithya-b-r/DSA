@@ -4,9 +4,8 @@ class selectionSort {
     int i, j, minIndex, temp;
 
     System.out.print("Array before sorting: ");
-    for (i = 0; i < arr.length; i++) {
+    for (i = 0; i < arr.length; i++) 
       System.out.print(arr[i] + " ");
-    }
 
     for (i = 0; i < arr.length - 1; i++) {
       minIndex = i;
@@ -23,8 +22,7 @@ class selectionSort {
 
     System.out.println();
     System.out.print("Array after sorting: ");
-    for (i = 0; i < arr.length; i++) {
+    for (i = 0; i < arr.length; i++)
       System.out.print(arr[i] + " ");
-    }
   }
 }
