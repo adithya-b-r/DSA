@@ -11,7 +11,7 @@ class optimal {
     Scanner sc = new Scanner(System.in);
 
     System.out.print("Enter value for K: ");
-    k = sc.nextInt();
+    k = sc.nextInt() % n;
 
     for (i = 0; i < k; i++) {
       temp = arr[n - 1];
