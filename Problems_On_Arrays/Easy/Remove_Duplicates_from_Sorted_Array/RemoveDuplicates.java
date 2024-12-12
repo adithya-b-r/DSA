@@ -2,19 +2,19 @@ package Remove_Duplicates_from_Sorted_Array;
 
 class RemoveDuplicates {
   public static void main(String[] args) {
-    int[] arr = { 1, 1, 2, 2, 2, 3, 3, 4, 4, 4 };
-    int n = arr.length, i = 0;
+    int[] nums = { 1, 1, 2, 2, 2, 3, 3, 4, 4, 4 };
+    int n = nums.length, i, uniqueIndex=0;
 
-    for (int j = 1; j < n; j++) {
-      if (arr[i] == arr[j]) {
-        arr[i] = 0;
+    for(i=1; i<n; i++){
+      if(nums[i] != nums[uniqueIndex]){
+        nums[++uniqueIndex] = nums[i];
       }
-      i++;
     }
 
-    for (int k = 0; k < n; k++) {
-      if (arr[k] != 0)
-        System.out.print(arr[k] + " ");
+    uniqueIndex++;
+
+    for(i=0; i<uniqueIndex; i++){
+      System.out.print(nums[i] + " ");
     }
   }
 }
