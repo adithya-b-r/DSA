@@ -6,12 +6,9 @@ class brute {
     int n = arr.length;
 
     for (int i = 0; i < n; i++) {
+      sum = 0;
       for (int j = i; j < n; j++) {
-        sum = 0;
-
-        for (int k = i; k <= j; k++) {
-          sum += arr[k];
-        }
+          sum += arr[j];
 
         if (sum == K) {
           lngSub = Math.max(lngSub, j - i + 1);
@@ -25,7 +22,7 @@ class brute {
 
   public static void main(String[] args) {
     int arr[] = { 1, 2, 3, 1, 1, 1, 1, 4, 2, 3 };
-    int k = 3;
+    int k = 4;
 
     System.out.println("Longest Subarray: " + longestSubarray(arr, k));
   }
